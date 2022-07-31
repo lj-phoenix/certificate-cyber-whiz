@@ -5,7 +5,7 @@ import Certificate from "./components/Certficate";
 
 function App() {
   return (
-    <Router basename="certificate-web-wonders">
+    <Router basename="certificate-cyber-whiz">
       <Switch>
         <Route path="/:id">
           <Certificate />
