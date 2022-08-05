@@ -38,17 +38,35 @@ function Certificate() {
   function certificateApperication(type) {
     switch (type) {
       case `1st`:
-        return `Skills earned by participant are computer architecture, computer networking and cyber security`;
+        return `For your exceptional performance and for securing <b>1st</b> rank in the event <b>Cyber Whiz</b> `;
       case `2nd`:
-        return `Skills earned by participant are computer architecture, computer networking and cyber security`;
+        return `For your exceptional performance and for securing <b>2nd</b> rank in the event <b>Cyber Whiz</b> `;
       case `3rd`:
-        return `Skills earned by participant are computer architecture, computer networking and cyber security`;
+        return `For your exceptional performance and for securing <b>3rd</b> rank in the event <b>Cyber Whiz</b> `;
       case `mentor`:
-        return `Skills taught were computer architecture, computer networking and cyber security`;
+        return `For their active mentorship during the event <b>Cyber Whiz</b> organised by <b>LJ Phoenix Club</b>. `;
       case `co-ordinator`:
-        return `Skills taught were computer architecture, computer networking and cyber security`;
+        return `For actively coordinating and managing the event <b>Cyber Whiz</b> organised by <b>LJ Phoenix Club</b>. `;
       case `participant`:
-        return `Skills earned by participant are computer architecture, computer networking and cyber security`;
+        return `For their active participation and commitment to the event <b>Cyber Whiz</b> along with performing mini cyber hacks`;
+      default:
+        return "";
+    }
+  }
+  function certificateSkillEarned(type) {
+    switch (type) {
+      case `1st`:
+        return `The participant was skilled in <b>Computer Architecture, Computer Networks, Cyber Security</b>`;
+      case `2nd`:
+        return `The participant was skilled in <b>Computer Architecture, Computer Networks, Cyber Security</b>`;
+      case `3rd`:
+        return `The participant was skilled in <b>Computer Architecture, Computer Networks, Cyber Security</b>`;
+      case `mentor`:
+        return `We are really thankful for your lasting efforts and commitment that made this event a super success.`;
+      case `co-ordinator`:
+        return `We are really thankful for your support and presence that made this event a super success.`;
+      case `participant`:
+        return `Skills obtained: <b>Computer Architecture, Computer Networks, Cyber Security</b>`;
       default:
         return "";
     }
@@ -62,6 +80,10 @@ function Certificate() {
         return `Excellence`;
       case `3rd`:
         return `Excellence`;
+      case `mentor`:
+        return `Mentorship`;
+      case `co-ordinator`:
+        return `Recognition`;
       default:
         return "APPRECIATION";
     }
@@ -72,6 +94,7 @@ function Certificate() {
     setInfo({
       certifcateHonoured: "We are honoured to present this certificate to",
       certificateApperication: certificateApperication(student.type),
+      certificateSkillEarned: certificateSkillEarned(student.type),
       name: student.name,
       email: student.email,
       type: student.type,
@@ -106,7 +129,6 @@ function Certificate() {
         <div
           className="certificate__print"
           onClick={() => {
-            console.log(HtmlStringVerify, htmlRef.current.innerText);
             if (HtmlStringVerify == htmlRef.current.innerText) {
               printDiv(
                 "certificate-web-wonder",
@@ -159,9 +181,16 @@ function Certificate() {
                 dangerouslySetInnerHTML={{
                   __html: info.certificateApperication,
                 }}
-              >
-                {/* {info.certificateApperication} */}
-              </div>
+              ></div>
+              <div
+                className="info-description"
+                style={{
+                  marginTop: "20rem",
+                }}
+                dangerouslySetInnerHTML={{
+                  __html: info.certificateSkillEarned,
+                }}
+              ></div>
             </div>
           </div>
         </div>
