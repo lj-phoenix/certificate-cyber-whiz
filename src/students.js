@@ -359,7 +359,7 @@ export const students = [
   {
     id: 51,
     email: "jasmeetsarin@gmail.com",
-    name: "Jasmeet Saein",
+    name: "Jasmeet Sarin",
     type: "participant",
     isActive: true,
   },
