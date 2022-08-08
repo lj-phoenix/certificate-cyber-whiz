@@ -492,7 +492,7 @@ export const students = [
   {
     id: 70,
     email: "prinsapatel0203@gmail.com",
-    name: "Prinsha Patel",
+    name: "Prinsa Patel",
     type: "participant",
     isActive: true,
   },
@@ -550,7 +550,7 @@ export const students = [
   {
     id: 78,
     email: "",
-    name: "Vivek Thobani",
+    name: "Vivek Thobhani",
     type: "co-ordinator",
     isActive: true,
   },
